@@ -1,8 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+#
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestResponse.Api", "RequestResponse.Api\RequestResponse.Api.csproj", "{0A25E2D8-B18A-40BB-973E-C3EE0E21D3FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestResponse.Console", "RequestResponse.Console\RequestResponse.Console.csproj", "{C39BC833-6246-40E2-8ECB-BAF37F29D90C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gRPC", "gRPC", "{5E149530-7D0B-4092-8E2B-F8799992110B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grpc.Server", "gRPC\Grpc.Server\Grpc.Server.csproj", "{31E2759A-620D-48B3-A671-B11A0644C22B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grpc.Client", "gRPC\Grpc.Client\Grpc.Client.csproj", "{E03E3D52-43E3-4C37-B976-95FC5476220E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +25,17 @@ Global
 		{C39BC833-6246-40E2-8ECB-BAF37F29D90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C39BC833-6246-40E2-8ECB-BAF37F29D90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C39BC833-6246-40E2-8ECB-BAF37F29D90C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E2759A-620D-48B3-A671-B11A0644C22B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E2759A-620D-48B3-A671-B11A0644C22B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E2759A-620D-48B3-A671-B11A0644C22B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E2759A-620D-48B3-A671-B11A0644C22B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E03E3D52-43E3-4C37-B976-95FC5476220E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03E3D52-43E3-4C37-B976-95FC5476220E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03E3D52-43E3-4C37-B976-95FC5476220E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03E3D52-43E3-4C37-B976-95FC5476220E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31E2759A-620D-48B3-A671-B11A0644C22B} = {5E149530-7D0B-4092-8E2B-F8799992110B}
+		{E03E3D52-43E3-4C37-B976-95FC5476220E} = {5E149530-7D0B-4092-8E2B-F8799992110B}
 	EndGlobalSection
 EndGlobal
