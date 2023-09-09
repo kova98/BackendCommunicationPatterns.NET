@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using RequestResponse.Console;
 
-var client = new HttpClient { BaseAddress = new Uri("http://localhost:5266/") };
+var client = new HttpClient { BaseAddress = new Uri("http://localhost:5001/") };
 var item = new Item(5, "Item 5");
 
 var postResponse = await client.PostAsJsonAsync("items", item);
@@ -21,7 +21,7 @@ Console.WriteLine(deleteResponse);
 var services = new ServiceCollection();
 services.AddHttpClient("Local", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5266/");
+    client.BaseAddress = new Uri("http://localhost:5001/");
     client.DefaultRequestHeaders.Add("Accept", "application/json");
     client.Timeout = TimeSpan.FromSeconds(15);
 });

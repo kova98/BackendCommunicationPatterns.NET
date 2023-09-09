@@ -1,4 +1,4 @@
-﻿namespace RequestResponse.Api;
+﻿namespace HTTP.Server;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.JsonPatch;

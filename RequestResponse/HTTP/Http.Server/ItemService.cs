@@ -1,4 +1,4 @@
-﻿namespace RequestResponse.Api;
+﻿namespace HTTP.Server;
 
 public class ItemService
 {
