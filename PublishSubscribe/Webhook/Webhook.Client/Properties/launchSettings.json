@@ -1,0 +1,9 @@
+﻿{
+  "profiles": {
+    "Webhook.Client": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5004"
+    }
+  }
+}
