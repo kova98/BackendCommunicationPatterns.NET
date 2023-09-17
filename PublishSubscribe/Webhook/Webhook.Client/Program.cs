@@ -1,6 +1,6 @@
 const string server = "http://localhost:5003";
-const string callback = "http://localhost:5004/wh/item/created";
-const string topic = "item.created";
+const string callback = "http://localhost:5004/wh/item/new";
+const string topic = "item.new";
 
 var client = new HttpClient();
 
@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddLogging();
 
 var app = builder.Build();
-app.MapPost("/wh/item/created", (object payload, ILogger<Program> logger) =>
+app.MapPost("/wh/item/new", (object payload, ILogger<Program> logger) =>
 {
     logger.LogInformation("Received payload: {payload}", payload);
 });
