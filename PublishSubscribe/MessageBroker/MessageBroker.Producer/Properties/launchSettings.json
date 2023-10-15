@@ -1,0 +1,7 @@
+﻿{
+  "profiles": {
+    "MessageBroker.Producer": {
+      "commandName": "Project"
+    }
+  }
+}
