@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBroker.Contracts", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBroker.Producer", "PublishSubscribe\MessageBroker\MessageBroker.Producer\MessageBroker.Producer.csproj", "{4A467A5B-3BE3-496D-A590-C023FA440617}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LongPolling", "LongPolling", "{89F63F4F-4DA3-49EA-AE49-26A298CA1AD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongPolling.Server", "LongPolling\LongPolling.Server\LongPolling.Server.csproj", "{CA69016B-9E1C-462A-A2EF-B4FED0CE5573}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,10 @@ Global
 		{4A467A5B-3BE3-496D-A590-C023FA440617}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A467A5B-3BE3-496D-A590-C023FA440617}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A467A5B-3BE3-496D-A590-C023FA440617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA69016B-9E1C-462A-A2EF-B4FED0CE5573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA69016B-9E1C-462A-A2EF-B4FED0CE5573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA69016B-9E1C-462A-A2EF-B4FED0CE5573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA69016B-9E1C-462A-A2EF-B4FED0CE5573}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5E149530-7D0B-4092-8E2B-F8799992110B} = {E0C99794-1CC2-453D-B094-74397A1FBE79}
@@ -88,5 +96,6 @@ Global
 		{3C5D100B-366F-4439-9D1F-8ABE01730CE1} = {86F183F6-F778-42BE-A4F1-19BB8FB02453}
 		{462CE59B-4EEE-4988-9CEC-D9D6E2976CF9} = {86F183F6-F778-42BE-A4F1-19BB8FB02453}
 		{4A467A5B-3BE3-496D-A590-C023FA440617} = {86F183F6-F778-42BE-A4F1-19BB8FB02453}
+		{CA69016B-9E1C-462A-A2EF-B4FED0CE5573} = {89F63F4F-4DA3-49EA-AE49-26A298CA1AD8}
 	EndGlobalSection
 EndGlobal
