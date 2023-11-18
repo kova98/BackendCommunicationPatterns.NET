@@ -1,0 +1,9 @@
+﻿{
+  "profiles": {
+    "ServerSentEvents.Server": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5006"
+    }
+  }
+}

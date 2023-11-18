@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSE Client</title>
+</head>
+<body>
+<h1>Server-Sent Events Client</h1>
+<script>
+    const eventSource = new EventSource('http://localhost:5006/');
+
+    eventSource.onmessage = function (event) {
+        const item = JSON.parse(event.data);
+        console.log("New item received:", item);
+    };
+</script>
+</body>
+</html>
