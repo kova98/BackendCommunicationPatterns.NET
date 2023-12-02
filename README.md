@@ -8,3 +8,4 @@ This is a repo with code examples for my series on Backend Communication Pattern
 4. [Pub-Sub using RabbitMQ](https://medium.com/@kova98/pub-sub-in-net-with-masstransit-44cb27024497)
 5. [Long Polling](https://medium.com/@kova98/long-polling-in-net-08caa91000cd)
 6. [Server-Sent Events](https://medium.com/@kova98/server-sent-events-in-net-7f700b21cdb7)
+7. [WebSocket](https://medium.com/@kova98/websockets-in-net-59f1fc69bdcb)
