@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Client</title>
+</head>
+<body>
+<h1>WebSocket Client</h1>
+<div id="messages"></div>
+<input id="chatbox" >
+<script>
+    const socket = new WebSocket('ws://localhost:5007');
+    
+    socket.onmessage = function (event) {
+        const messages = document.getElementById("messages");
+        messages.innerHTML += `<p>${event.data}</p>`;
+    };
+
+    document.getElementById("chatbox").addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            socket.send(event.target.value);
+            event.target.value = "";
+        }
+    });
+</script>
+</body>
+</html>
