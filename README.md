@@ -9,3 +9,4 @@ This is a repo with code examples for my series on Backend Communication Pattern
 5. [Long Polling](https://medium.com/@kova98/long-polling-in-net-08caa91000cd)
 6. [Server-Sent Events](https://medium.com/@kova98/server-sent-events-in-net-7f700b21cdb7)
 7. [WebSocket](https://medium.com/@kova98/websockets-in-net-59f1fc69bdcb)
+8. [SignalR](https://medium.com/@kova98/real-time-apps-in-net-with-signalr-f4e0381771ab)
