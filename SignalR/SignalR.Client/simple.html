@@ -1,20 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>SignalR Client</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"
-            integrity="sha512-7rhBJh1om/W5Ztx7WiYOR9h2wlSaTmPyQMoHFtbT/FVNIA12y6S6I8HY9mrBS1uJ3dSU/R3qaSAXsGYuRjMDxg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
 </head>
 <body>
 <h1>SignalR Client</h1>
 <div id="messages"></div>
 <input id="chatbox">
 <script>
-    const endpoint = "http://localhost:5008/chatHub";
     const connection = new signalR.HubConnectionBuilder()
         .withAutomaticReconnect()
-        .withUrl(endpoint)
+        .withUrl("http://localhost:5008/simple")
         .build();
 
     connection.start().then(function () {

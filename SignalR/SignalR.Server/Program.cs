@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.SignalR;
-
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(o =>
 {
@@ -12,14 +10,7 @@ builder.Services.AddSignalR();
 
 var app = builder.Build();
 app.UseCors("AllowAnyOrigin");
-
-app.MapHub<ChatHub>("/chatHub");
+app.MapHub<SimpleChatHub>("/simple");
+app.MapHub<AdvancedChatHub>("/advanced");
 app.Run();
 
-public class ChatHub : Hub
-{
-    public async Task SendMessage(string message)
-    {
-        await Clients.All.SendAsync("ReceiveMessage", message);
-    }
-}
