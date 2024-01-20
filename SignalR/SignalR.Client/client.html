@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignalR Client</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"
+            integrity="sha512-7rhBJh1om/W5Ztx7WiYOR9h2wlSaTmPyQMoHFtbT/FVNIA12y6S6I8HY9mrBS1uJ3dSU/R3qaSAXsGYuRjMDxg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<h1>SignalR Client</h1>
+<div id="messages"></div>
+<input id="chatbox">
+<script>
+    const endpoint = "http://localhost:5008/chatHub";
+    const connection = new signalR.HubConnectionBuilder()
+        .withAutomaticReconnect()
+        .withUrl(endpoint)
+        .build();
+
+    connection.start().then(function () {
+        document.getElementById("chatbox").addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                connection.invoke("SendMessage", event.target.value);
+                event.target.value = "";
+            }
+        });
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    connection.on("ReceiveMessage", function (message) {
+        const messages = document.getElementById("messages");
+        messages.innerHTML += `<p>${message}</p>`;
+    });
+</script>
+</body>
+</html>
